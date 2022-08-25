@@ -19,9 +19,9 @@ class CompagniesSeeder extends Seeder
         DB::table('compagnies')->insert([
             "nom"=> Faker::create()->company,
             "adresse"=> Faker::create()->streetName,
-            "codePostal"=> Faker::create()->postcode,
+            "codePostal"=> Faker::create()->postcode($min=1000, $max=9000),
             "numeroPorte"=> Faker::create()->buildingNumber,
-            "telephone"=> Faker::create()->phoneNumber,
+            "telephone"=> Faker::create()->phoneNumber($min=1000, $max=9000),
             "email"=> Faker::create()->email,
             "nomPerso"=> Faker::create()->firstName,
             "prenomPerso"=> Faker::create()->lastName,

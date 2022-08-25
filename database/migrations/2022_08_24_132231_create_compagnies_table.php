@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string("nom");
             $table->string("adresse");
-            $table->integer("codePostal");
+            $table->bigInteger("codePostal");
             $table->integer("numeroPorte");
-            $table->integer("telephone");
+            $table->string("telephone");
             $table->string("email");
             $table->string("nomPerso");
             $table->string("prenomPerso");

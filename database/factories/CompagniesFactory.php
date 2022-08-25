@@ -19,9 +19,9 @@ class CompagniesFactory extends Factory
         return [
             "nom"=> $this->faker->company,
             "adresse"=> $this->faker->streetName,
-            "codePostal"=> $this->faker->postcode,
+            "codePostal"=> $this->faker->postcode($min=1000, $max=9000),
             "numeroPorte"=> $this->faker->buildingNumber,
-            "telephone"=> $this->faker->phoneNumber,
+            "telephone"=> $this->faker->phoneNumber($min=1000, $max=9000),
             "email"=> $this->faker->email,
             "nomPerso"=> $this->faker->firstName,
             "prenomPerso"=> $this->faker->lastName,
